@@ -1,20 +1,25 @@
-[[https://melpa.org/#/transfer-sh][file:https://melpa.org/packages/transfer-sh-badge.svg]]
+# [[https://melpa.org/#/transfer-sh][file:https://melpa.org/packages/transfer-sh-badge.svg]]
+
 * transfer-sh.el
-  This package provides an interface for uploading data to transfer.sh directly from within Emacs.
-  
+  This package provides an interface for uploading data to transfer.sh
+  directly from within Emacs.
+
+  This package was originally created by S. Roskamp
+  <steffen.roskamp@gmail.com> (see original repository [[https://github.com/SRoskamp/transfer-sh.el][here]]).
+
 ** Installation
    The package is available in the [[http://www.melpa.org][MELPA]] repository. Alternatively, you can clone this repository.
 
 ** Usage
    An upload can be performed by selecting the region/buffer to upload and then executing one of the following commands:
 
-#+BEGIN_SRC emacs-lisp
+   #+BEGIN_SRC emacs-lisp
   ;; This simply uploads the selected text to transfer-sh and returns the link
   transfer-sh-upload
 
   ;; Use this to encrypt files before uploading. It will prompt you for a passcode to pass to gpg.
   transfer-sh-upload-gpg
-#+END_SRC
+   #+END_SRC
 
    When called with the universal prefix argument (C-u), the upload will be done asynchronously. This prevents emacs
    from locking while uploading large files. This functionality requires the [[https://github.com/jwiegley/emacs-async][async.el]] package to be installed.
