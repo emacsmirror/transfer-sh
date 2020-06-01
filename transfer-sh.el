@@ -35,6 +35,7 @@
 ;;; Code:
 
 (require 'epa)
+(require 'async)
 
 (defgroup transfer-sh nil
   "Interface to transfer.sh uploading service."
